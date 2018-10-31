@@ -2,10 +2,15 @@ package main;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-class RectangleTest {
+class RectangleTest extends Rectangle{
+	
 
+	public RectangleTest(int iWidth, int iLength) {
+		super(iWidth, iLength);
+	}
 	@Test
 	void Constructortest() {
 		try {
@@ -56,7 +61,7 @@ class RectangleTest {
 	}
 	@Test 
 	void compareToTest() {
-		
+		Assert.assertTrue(new Rectangle(4,4).compareTo(new Rectangle(6,5))<0);
 	}
 
 }

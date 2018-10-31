@@ -1,6 +1,6 @@
 package main;
 
-public class Cuboid extends Rectangle{
+public class Cuboid extends Rectangle {
 	private int iDepth;
 	
 	public Cuboid(int iWidth, int iLength, int iDepth) {
@@ -25,7 +25,7 @@ public class Cuboid extends Rectangle{
 	public double perimeter() {
 		throw new UnsupportedOperationException();
 	}
-	public int compareTo(Object Cuboid) {
-		
+	public int compareTo(Cuboid C1) {
+		return this.getiLength()*getiWidth()*iDepth-C1.getiLength()*getiWidth()*iDepth;
 	}
 }

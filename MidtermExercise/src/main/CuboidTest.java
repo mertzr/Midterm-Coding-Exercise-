@@ -2,10 +2,14 @@ package main;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-class CuboidTest {
+class CuboidTest extends Cuboid{
 	
+	public CuboidTest(int iWidth, int iLength, int iDepth) {
+		super(iWidth, iLength, iDepth);
+	}
 	@Test
 	void ConstructorTest() {
 		try {
@@ -45,13 +49,14 @@ class CuboidTest {
 		  assertTrue(thrown);
 		}
 		
-	}
+	
 	@Test 
 	void sortAreaTest() {
-		
+		Assert.assertTrue(new Cuboid(4,4,4).compareTo(new Cuboid(6,6,6))<0);
 	}
 	@Test
 	void sortVolumeTest() {
+		Assert.assertTrue(new Cuboid(4,4,4).compareTo(new Cuboid(6,6,6))<0);
 		
 	}
 }

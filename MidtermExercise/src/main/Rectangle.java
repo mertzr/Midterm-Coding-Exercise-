@@ -1,6 +1,6 @@
 package main;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements Comparable<Rectangle>{
 	private int iWidth;
 	private int iLength;
 	public Rectangle(int iWidth, int iLength) {
@@ -31,7 +31,7 @@ public class Rectangle extends Shape {
 		return (2*iLength)+(2*iWidth);
 	}
 	
-	public int compareTo(Object Rectangle) {
-		
+	public int compareTo(Rectangle R1) {
+		return this.iLength*iWidth-R1.iLength*iWidth;
 	}
 }
